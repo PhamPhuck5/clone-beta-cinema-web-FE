@@ -1,0 +1,184 @@
+.booking {
+  background-color: #f8f8f4;
+  .seat-type {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .seats-row {
+    flex-flow: row nowrap;
+  }
+  .seat-map {
+    overflow-x: auto;
+  }
+  .seat-item {
+    margin: 1px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tier-seats {
+    display: flex;
+    flex-flow: row wrap;
+    width: 95%;
+    padding: 2em;
+    margin: 1em;
+    .tier-seat-item {
+      display: inline-block;
+    }
+    .tier-seat-name {
+      margin: 1em;
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+    }
+    .total-money {
+      width: 100px;
+      margin: 0px 1em;
+      display: inline-block;
+      position: relative;
+      height: 60px;
+    }
+    @media (max-width: 1000px) {
+      .tier-seat-name {
+        float: right;
+        width: 60%;
+        text-align: center;
+        font-size: larger;
+      }
+      .total-money {
+        width: 100% !important;
+        .timer {
+          text-align: right;
+        }
+        .money {
+          text-align: right;
+        }
+      }
+      .tier-seat-item {
+        width: 100%;
+      }
+    }
+    .timer {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      width: 100%;
+      color: black;
+      font-size: xx-large;
+      text-align: center;
+    }
+  }
+
+  .info {
+    margin-bottom: 1em;
+    flex: 0 0 25%;
+    position: sticky;
+    top: 20px;
+    bottom: 20px;
+    height: fit-content;
+    background-color: white;
+
+    .item-poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      border: 0;
+      margin: 0;
+    }
+    .row {
+      padding-bottom: 1em;
+      font-size: small;
+    }
+  }
+  @media (max-width: 1000px) {
+    .info {
+      flex: 0 0 100%;
+    }
+  }
+  .buy-ticket {
+    display: block;
+    height: 2em;
+    padding: 0;
+    border: none;
+    margin-top: 3em;
+    margin: auto;
+
+    position: relative;
+    color: whitesmoke;
+    font-size: large;
+    background-image: linear-gradient(
+      to right,
+      #0a64a7 0%,
+      #258dcf 51%,
+      #3db1f3 100%
+    );
+    .buy-ticket-icon {
+      font-size: 50px;
+      position: absolute;
+      left: -8px;
+      top: -11px;
+      transform: rotate(-45deg);
+
+      opacity: 0.5;
+      color: #fff;
+    }
+  }
+  .payment-info-container {
+    padding: 1em 0em;
+    .payment-info-header {
+      padding-bottom: 1em;
+      font-size: x-large;
+    }
+    .payment-info {
+      font-size: medium;
+    }
+  }
+  .booked-seat-info {
+    .booked-seat {
+      width: 100%;
+      // height: 2em;
+      border-bottom: solid;
+      div {
+        display: inline-block;
+        font-size: large;
+      }
+    }
+  }
+  .combo {
+    font-size: medium;
+    table {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    td {
+      padding: 1em;
+      div {
+        display: inline-block;
+      }
+      .quantity-button {
+        background-color: #258dcf;
+        margin: 0em 1em;
+        color: white;
+        width: 25px;
+        height: 25px;
+
+        font-size: 18px;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

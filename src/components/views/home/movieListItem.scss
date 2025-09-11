@@ -1,0 +1,100 @@
+.movie-list-item {
+  .item-container {
+    padding: 28px;
+    border: 20px 10px;
+    .item-content {
+      .poster {
+        position: relative;
+        padding: 0;
+        .item-poster {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+          padding: 0;
+          border: 0;
+          margin: 0;
+        }
+        // .item-poster:hover {
+        //   filter: brightness(70%); /* giảm độ sáng xuống 70% */
+        // }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          background-color: #33333380;
+          border-radius: 20px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+          }
+          i {
+            font-size: 45px;
+            height: auto;
+            width: auto;
+            color: white;
+          }
+        }
+        .overlay:hover {
+          opacity: 1;
+        }
+      }
+      .movie-header {
+        color: #337ab7;
+        font-weight: bolder;
+        margin: 10px 0px;
+        font-size: large;
+      }
+      .movie-info {
+        padding: 0;
+        margin: 0;
+      }
+      .buy-ticket {
+        margin-top: 3em;
+        padding: 0;
+
+        height: 2em;
+        width: 100%;
+        position: relative;
+        background-image: linear-gradient(
+          to right,
+          #0a64a7 0%,
+          #258dcf 51%,
+          #3db1f3 100%
+        );
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: large;
+        font-weight: bold;
+        color: white;
+
+        .buy-ticket-icon {
+          font-size: 50px;
+          position: absolute;
+          left: -8px;
+          top: -11px;
+          transform: rotate(-45deg);
+
+          opacity: 0.5;
+          color: #fff;
+        }
+      }
+    }
+  }
+  s {
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

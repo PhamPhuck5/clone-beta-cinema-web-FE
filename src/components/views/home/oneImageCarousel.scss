@@ -1,0 +1,80 @@
+.embla {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  .embla__viewport {
+    overflow: hidden;
+
+    .embla__container {
+      display: flex;
+      padding: 0;
+      border: none;
+      margin: 0;
+
+      .embla__slide {
+        flex: 0 0 100%;
+        padding: 0;
+        border: none;
+        margin: 0;
+
+        img {
+          display: block;
+          width: 100%;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .embla__button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      border: none;
+      cursor: pointer;
+      font-size: 3.5rem;
+      height: 100%;
+    }
+    .btn_pre {
+      left: 0;
+      background: linear-gradient(90deg, #0000002b, #00000000);
+    }
+    .btn_pre:hover {
+      background: linear-gradient(90deg, #000000a9, #00000000);
+    }
+
+    .btn_next {
+      right: 0;
+      background: linear-gradient(270deg, #0000002b, #00000000);
+    }
+    .btn_next:hover {
+      background: linear-gradient(270deg, #000000a9, #00000000);
+    }
+  }
+}
+
+.embla__dots {
+  position: absolute;
+  bottom: 10px; /* Cách đáy 10px */
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.5rem;
+  .embla__dot {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+}
+
+.embla__dot.is-active {
+  background: #333;
+}

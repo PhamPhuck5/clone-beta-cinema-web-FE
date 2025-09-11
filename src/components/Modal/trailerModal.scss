@@ -1,0 +1,47 @@
+.modal-dialog {
+  margin-top: 100px !important; /* đẩy modal xuống 100px */
+}
+.custom-modal {
+  max-width: 700px;
+  width: 90%;
+  margin-bottom: 20px;
+
+  .custom-modal-header {
+    background-color: white !important;
+    color: #333 !important;
+    font-size: large;
+    padding: 20px !important;
+    margin-top: 20px;
+
+    .modal-title {
+      font-size: larger !important;
+      font-weight: bold !important;
+    }
+    .btn-close {
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  .modal-body {
+    margin: auto;
+    width: 650px;
+    max-width: 90%;
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 ratio = 9/16*100 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px; /* optional */
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}

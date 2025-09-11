@@ -1,0 +1,22 @@
+.partner-container {
+  width: 100%;
+  padding: 1em;
+  .partner-info {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h2 {
+      padding-top: 1em;
+      text-align: center;
+      color: #0000cd;
+    }
+    p {
+      font-size: small;
+      strong {
+        font-size: medium;
+        color: #ff8c00;
+      }
+    }
+  }
+}

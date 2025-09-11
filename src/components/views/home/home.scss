@@ -1,0 +1,48 @@
+.home {
+  .movies-container {
+    width: 100%;
+    margin-bottom: 10rem;
+
+    .movies-header {
+      display: flex;
+      justify-content: center;
+
+      .movie-type-active {
+        border-bottom: 4px solid transparent;
+        border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+        border-image-slice: 1;
+        border-width: 0px 0px 4px 0px;
+
+        /* 1. Tạo gradient làm nền */
+        background: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+
+        /* 2. Cắt gradient theo hình dạng của văn bản */
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        /* 3. Làm cho màu chữ trong suốt để gradient hiển thị */
+        -webkit-text-fill-color: transparent;
+      }
+      button {
+        border: none;
+        border-bottom: 2px solid rgb(0 0 0 / 19%);
+        background: none;
+        font-size: x-large;
+        font-weight: bold;
+        padding: 10px 15px;
+      }
+    }
+    .movies-content {
+      display: flex;
+      justify-content: center;
+      .movies-content-container {
+        width: 100%;
+      }
+      @media (min-width: 768px) {
+        .movies-content-container {
+          width: 75%; /* khi màn hình >= 768px thì chiếm 75% */
+        }
+      }
+    }
+  }
+}

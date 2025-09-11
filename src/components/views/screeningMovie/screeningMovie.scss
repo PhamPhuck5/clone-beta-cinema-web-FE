@@ -1,0 +1,100 @@
+.screening-movies-in-theater {
+  width: 90%;
+  margin: auto;
+  .day-picker-container {
+    border-bottom: solid 1px #333;
+    width: 100%;
+    text-align: center;
+    .screening-day-container {
+      display: inline-block;
+      width: 150px;
+      max-width: 25%;
+      button {
+        text-align: center;
+        font-size: large;
+        background-color: transparent;
+
+        padding: 0px 10px;
+        border: none;
+        margin: 0 5px;
+        s {
+          font-size: xx-large;
+          font-weight: bold;
+          font-weight: 100;
+        }
+      }
+    }
+    .screening-day-container-active {
+      border-bottom: solid 3px #03599d !important;
+      button {
+        color: #03599d !important;
+      }
+      s {
+        color: #03599d !important;
+      }
+    }
+  }
+
+  .content-container {
+    .movie-content {
+      margin: 20px 0em;
+      width: 100%;
+      padding: 1em;
+      .movie-info-container {
+        .poster {
+          img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+          }
+        }
+        .movie-info {
+          i {
+            color: #337ab7;
+          }
+          .movie-name {
+            font-weight: bolder !important;
+            font-size: xx-large !important;
+            color: #337ab7;
+          }
+          .movie-info-field {
+            display: inline;
+          }
+          font-size: large;
+        }
+
+        .screenings {
+          .screening-container {
+            display: inline-block;
+            width: 80px;
+            margin: 0px 10px;
+
+            button {
+              width: 100%;
+              text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              color: #525252;
+
+              padding: 5px 5px;
+              border: none;
+
+              transition: color 1s ease;
+            }
+            button:hover {
+              color: red;
+            }
+          }
+          .empty-seat {
+            font-size: x-small;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .screening-movies-in-theater {
+    width: 75%;
+  }
+}
