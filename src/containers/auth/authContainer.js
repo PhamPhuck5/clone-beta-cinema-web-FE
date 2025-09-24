@@ -25,6 +25,10 @@ export const login = async (email, password) => {
   }
 };
 
+export const saveAccessToken = (token) => {
+  localStorage.setItem("accessToken", token);
+};
+
 export const register = async (
   name,
   email,

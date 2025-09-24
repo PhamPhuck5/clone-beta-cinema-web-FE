@@ -8,12 +8,13 @@ import { FormattedMessage } from "react-intl";
 import CinemaDropdown from "./HeaderDropdown.jsx";
 import { path } from "../../utils/constant.js";
 
+import { getDispatchs } from "../../store/dispatch/dispatchInstance.js";
 import "./Header.scss";
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
+  let globalDispatcher = getDispatchs();
   const systemMenuPath = path.systemMenuPath;
   let language = useSelector((state) => state.app.language);
   let isLogin = useSelector((state) => state.user.isLoggedIn);
@@ -50,6 +51,23 @@ const Header = () => {
                   <FormattedMessage id="common.hello" /> {userInfo.name}
                 </p>
               </>
+            )}
+            {isLogin && (
+              <button
+                style={{
+                  backgroundColor: "transparent",
+                  color: "white",
+                  border: "none",
+                  margin: "0px 5px",
+                }}
+              >
+                <i
+                  className="fa-solid fa-right-from-bracket btn-change-language"
+                  onClick={() => {
+                    globalDispatcher[actionTypes.USER_LOGOUT]();
+                  }}
+                />
+              </button>
             )}
             <button
               className="btn-change-language"

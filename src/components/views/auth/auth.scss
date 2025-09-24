@@ -1,8 +1,8 @@
-div {
-  margin: 0;
-  padding: 0;
-}
 .auth-background {
+  div {
+    margin: 0;
+    padding: 0;
+  }
   margin: 0 px;
   display: flex;
   justify-content: center;
@@ -35,15 +35,19 @@ div {
         width: 100%;
         display: flex;
         justify-content: center;
-        .btn-sendrequest {
+        div {
+          text-align: center;
+          height: 3em;
           display: block;
-          max-width: 50%;
-
-          padding: 10px;
+          padding: 2px;
           border: none;
           border-radius: 5px;
-          margin: auto;
+          margin: 10px;
 
+          display: flex;
+          justify-content: center;
+        }
+        .div-sendrequest {
           background-image: linear-gradient(
             to right,
             #fc3606 0%,
@@ -51,6 +55,31 @@ div {
             #fc7704 100%
           );
           color: white;
+
+          button {
+            width: 90%;
+            background-color: transparent;
+            border: none;
+            color: white;
+          }
+        }
+        .div-facebook-auth {
+          background-image: linear-gradient(
+            to right,
+            #0a64a7 0%,
+            #258dcf 51%,
+            #3db1f3 100%
+          ) !important;
+        }
+        a.button-like {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          text-align: center;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }

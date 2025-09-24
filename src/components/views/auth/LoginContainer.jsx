@@ -49,20 +49,29 @@ const Login = () => {
       <span className="text-button forgot-password" onClick={() => {}}>
         quên mật khẩu
       </span>
-      <div className="request">
-        <button
-          className="btn-sendrequest"
-          onClick={async () => {
-            let name = (await login(email, password)).name;
-            dispatch({
-              type: actionTypes.USER_LOGIN_SUCCESS,
-              userInfo: { name: name },
-            });
-            navigate(-1);
-          }}
-        >
-          Đăng nhập bằng tài khoản
-        </button>
+      <div className="request row">
+        <div className="col-md-6 col-12 div-sendrequest">
+          <button
+            onClick={async () => {
+              let name = (await login(email, password)).name;
+              dispatch({
+                type: actionTypes.USER_LOGIN_SUCCESS,
+                userInfo: { name: name },
+              });
+              navigate(-1);
+            }}
+          >
+            Đăng nhập bằng tài khoản
+          </button>
+        </div>
+        <div className="col-md-6 col-12 div-facebook-auth">
+          <a
+            href={import.meta.env.VITE_BACKEND_URL + "/facebook/auth"}
+            className="button-like"
+          >
+            Đăng nhập bằng Facebook
+          </a>
+        </div>
       </div>
     </>
   );

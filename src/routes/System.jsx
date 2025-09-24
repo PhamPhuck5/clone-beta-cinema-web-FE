@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import { path } from "../utils";
 import ProtectedRoute from "../hoc/authentication.jsx";
-
+import OAuthSuccess from "../components/views/auth/oAuthSuccess.jsx";
 import Home from "../components/views/home/home.jsx";
 import Price from "../components/views/detail/price.jsx";
 import Partner from "../components/views/detail/partner.jsx";
@@ -28,6 +28,7 @@ const System = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Navigate to={systemMenuPath} replace />} />
         <Route path="login" element={<Auth />} />
+        <Route path="/oAuthsuccess" element={<OAuthSuccess />} />
         <Route path="home" element={<Home />} />
         <Route path="movie/:id" element={<Movie />} />
         <Route
