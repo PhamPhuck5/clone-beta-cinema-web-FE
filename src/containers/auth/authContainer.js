@@ -60,6 +60,23 @@ export const register = async (
   }
 };
 
+export const changePassword = async (email) => {
+  try {
+    const res = await api.post(
+      `/api/forgot`,
+      {
+        email: email,
+      },
+      {}
+    );
+
+    console.log(res);
+    return res;
+  } catch (err) {
+    if (axios.isCancel(err)) return;
+    console.error("error: ", err.message);
+  }
+};
 export const token_expired = () => {
   dispatchInstance[actionTypes.USER_LOGOUT]();
   localStorage.removeItem("accessToken");

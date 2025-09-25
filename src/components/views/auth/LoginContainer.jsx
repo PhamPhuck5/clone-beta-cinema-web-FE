@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { login } from "../../../containers/auth/authContainer.js";
 import { useDispatch } from "react-redux";
 import actionTypes from "../../../store/actions/actionTypes.js";
 import { useNavigate } from "react-router-dom";
+import ForgotPasswordModal from "../../Modal/forgotPasswordModal.jsx";
 
 const Login = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
+  const modalShow = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (
     <>
+      <ForgotPasswordModal ref={modalShow} />
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="col-12">
           <label>Email</label>
@@ -46,7 +49,12 @@ const Login = () => {
           </div>
         </div>
       </form>
-      <span className="text-button forgot-password" onClick={() => {}}>
+      <span
+        className="text-button forgot-password"
+        onClick={() => {
+          modalShow.current.show();
+        }}
+      >
         quên mật khẩu
       </span>
       <div className="request row">
